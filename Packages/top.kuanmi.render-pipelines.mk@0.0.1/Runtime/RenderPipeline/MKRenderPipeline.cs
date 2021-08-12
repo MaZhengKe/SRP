@@ -1,10 +1,15 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace SRP
+namespace KuanMi.Rendering.MKRP
 {
-    public class MKRenderPipline : RenderPipeline
+    public partial class MKRenderPipeline : RenderPipeline
     {
+        private readonly MKRenderPipelineAsset m_Asset;
+        public MKRenderPipeline(MKRenderPipelineAsset asset)
+        {
+            m_Asset = asset;
+        }
         protected override void Render(ScriptableRenderContext context, Camera[] cameras)
         {
             foreach (var camera in cameras)

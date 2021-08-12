@@ -1,0 +1,19 @@
+{
+    "name": "KuanMi.RenderPipelines.MKRP.Editor",
+    "rootNamespace": "",
+    "references": [
+        "KuanMi.RenderPipelines.MKRP.Runtime",
+        "Unity.RenderPipelines.Core.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
