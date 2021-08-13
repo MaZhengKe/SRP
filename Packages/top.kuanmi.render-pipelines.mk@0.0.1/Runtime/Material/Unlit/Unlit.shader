@@ -2,44 +2,40 @@
 {
     Properties
     {
-        _Color("Color Tint", Color) = (0.5,0.5,0.5)
+		_UnlitColor("Color", Color)= (1.0, 1.0, 1.0, 1.0)
         _MainTex("MainTex",2D) = "white"{}
     }
 
     HLSLINCLUDE
-    #include "UnityCG.cginc"
+    
+    #pragma target 4.5
+    #pragma only_renderers d3d11 playstation xboxone xboxseries vulkan metal switch
+    
+    //-------------------------------------------------------------------------------------
+    // Variant
+    //-------------------------------------------------------------------------------------
 
-    uniform float4 _Color;
-    sampler2D _MainTex;
+    //-------------------------------------------------------------------------------------
+    // Define
+    //-------------------------------------------------------------------------------------
 
-    struct a2v
-    {
-        float4 position : POSITION;
-        float2 uv : TEXCOORD0;
-    };
+    //-------------------------------------------------------------------------------------
+    // Include
+    //-------------------------------------------------------------------------------------
 
-    struct v2f
-    {
-        float4 position : SV_POSITION;
-        float2 uv : TEXCOORD0;
-    };
+    
+    #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+    #include "Packages/top.kuanmi.render-pipelines.mk/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+    
+    //#include "UnityCG.cginc"
 
-    v2f vert(a2v v)
-    {
-        v2f o;
-        UNITY_INITIALIZE_OUTPUT(v2f, o);
-        o.position = UnityObjectToClipPos(v.position);
-        o.uv = v.uv;
-        return o;
-    }
+    //-------------------------------------------------------------------------------------
+    // variable declaration
+    //-------------------------------------------------------------------------------------
 
-    half4 frag(v2f v) : SV_Target
-    {
-        half4 fragColor = half4(_Color.rgb, 1.0) * tex2D(_MainTex, v.uv);
-        return fragColor;
-    }
+    #include "Packages/top.kuanmi.render-pipelines.mk/Runtime/Material/Unlit/UnlitProperties.hlsl"
+     
     ENDHLSL
-
     SubShader
     {
         Tags
@@ -54,8 +50,11 @@
                 "LightMode" = "SRPDefaultUnlit"
             }
             HLSLPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
+
+            #include "Packages/top.kuanmi.render-pipelines.mk/Runtime/Material/Unlit/Unlit.hlsl"
+            
+            #pragma vertex Vert
+            #pragma fragment Frag
             ENDHLSL
         }
     }
