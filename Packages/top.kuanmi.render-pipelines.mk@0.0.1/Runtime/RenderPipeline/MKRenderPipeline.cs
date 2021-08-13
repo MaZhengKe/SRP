@@ -10,6 +10,7 @@ namespace KuanMi.Rendering.MKRP
         public MKRenderPipeline(MKRenderPipelineAsset asset)
         {
             m_Asset = asset;
+            GraphicsSettings.useScriptableRenderPipelineBatching = true;
         }
         CameraRenderer renderer = new CameraRenderer();
         protected override void Render(ScriptableRenderContext context, Camera[] cameras)
