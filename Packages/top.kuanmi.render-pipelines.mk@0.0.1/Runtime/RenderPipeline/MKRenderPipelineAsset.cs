@@ -36,9 +36,9 @@ namespace KuanMi.Rendering.MKRP
 
         protected override void OnValidate()
         {
-            Debug.Log("OnValidate");
+            //Debug.Log("OnValidate");
             if (GraphicsSettings.currentRenderPipeline == this){
-                Debug.Log("currentRenderPipeline == this");
+                //Debug.Log("currentRenderPipeline == this");
                 base.OnValidate();
             }
         }

@@ -6,13 +6,12 @@ namespace KuanMiEditor.Rendering.MKRP
 {
     [CustomEditor(typeof(MKRenderPipelineAsset))]
     [CanEditMultipleObjects]
-    sealed class MKRenderPipelineEditor : Editor
+    sealed class MKRenderPipelineEditor : UnityEditor.Editor
     {
         SerializedMKRenderPipelineAsset m_SerializedMKRenderPipeline;
         
         void OnEnable()
         {
-            var t = target as MKRenderPipelineAsset;
             m_SerializedMKRenderPipeline = new SerializedMKRenderPipelineAsset(serializedObject);
         }
 
