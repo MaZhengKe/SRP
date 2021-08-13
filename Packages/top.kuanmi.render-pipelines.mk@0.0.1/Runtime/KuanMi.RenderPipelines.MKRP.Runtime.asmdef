@@ -1,7 +1,8 @@
 {
     "name": "KuanMi.RenderPipelines.MKRP.Runtime",
-    "rootNamespace": "",
-    "references": [],
+    "references": [
+        "Unity.RenderPipelines.Core.Runtime"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,

@@ -10,5 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3abdda381a38d7f479eff4675caa6068, type: 3}
-  m_Name: New MKRenderPipelineAsset
+  m_Name: MKRP
   m_EditorClassIdentifier: 
+  m_RenderPipelineSettings:
+    colorBufferFormat: 74
+  allowShaderVariantStripping: 1
+  m_RenderPipelineResources: {fileID: 11400000, guid: 71d82b8d42293fd47b880b000ffa1dbf, type: 2}

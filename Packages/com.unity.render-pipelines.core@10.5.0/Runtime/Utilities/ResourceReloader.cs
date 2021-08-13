@@ -183,9 +183,11 @@ namespace UnityEngine.Rendering
 
         static UnityEngine.Object Load(string path, Type type, bool builtin)
         {
+            Debug.Log(path);
             // Check if asset exist.
             // Direct loading can be prevented by AssetDatabase being reloading.
             var guid = AssetDatabase.AssetPathToGUID(path);
+            Debug.Log(guid);
             if (!builtin && String.IsNullOrEmpty(guid))
                 throw new Exception($"Cannot load. Incorrect path: {path}");
 

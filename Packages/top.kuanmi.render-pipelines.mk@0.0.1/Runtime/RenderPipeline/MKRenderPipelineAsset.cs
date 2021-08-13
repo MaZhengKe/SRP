@@ -21,14 +21,26 @@ namespace KuanMi.Rendering.MKRP
         [SerializeField]
         internal bool allowShaderVariantStripping = true;
         
+        [SerializeField]
+        RenderPipelineResources m_RenderPipelineResources;
+
+        internal RenderPipelineResources renderPipelineResources
+        {
+            get => m_RenderPipelineResources;
+            set => m_RenderPipelineResources = value;
+        }
+        public override Shader defaultShader => m_RenderPipelineResources?.shaders.defaultPS;
+
         protected override RenderPipeline CreatePipeline()
             => new MKRenderPipeline(this);
 
         protected override void OnValidate()
         {
             Debug.Log("OnValidate");
-            if (GraphicsSettings.currentRenderPipeline == this)
+            if (GraphicsSettings.currentRenderPipeline == this){
+                Debug.Log("currentRenderPipeline == this");
                 base.OnValidate();
+            }
         }
     }
 }
