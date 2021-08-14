@@ -724,7 +724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372733669}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: General
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1355,7 +1355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899996053}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Unsuppost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1489,8 +1489,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.30468464, y: -0.6729064, z: 0.359623, w: -0.57011896}
-  m_LocalPosition: {x: 3.8803494, y: 3.2990894, z: 8.4564}
+  m_LocalRotation: {x: -0.07889874, y: -0.9209583, z: 0.26114848, w: -0.27823094}
+  m_LocalPosition: {x: -1.6052164, y: 5.6263313, z: 13.134592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

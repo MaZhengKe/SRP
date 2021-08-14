@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CatLike
+  m_Name: SRPBatch
   m_Shader: {fileID: 4800000, guid: 0a6c68d99f7041cea84b8ec608c36daa, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
