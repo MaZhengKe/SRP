@@ -11,7 +11,7 @@
                 "LightMode" = "SRPDefaultUnlit"
             }
             HLSLPROGRAM
-			#include "GPUUnlitPass.hlsl"
+			#include "GPUInstancingUnlitPass.hlsl"
             #pragma multi_compile_instancing
 			#pragma vertex UnlitPassVertex
 			#pragma fragment UnlitPassFragment
