@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ShaderFeatureTest
-  m_Shader: {fileID: 4800000, guid: 037be3f43efb49f891c3dd833789f44c, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: bad2edd6fbfc4a99ad387643a63b09e7, type: 3}
+  m_ShaderKeywords: _MKRP_SHOW_TEX _RED _Red
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,10 +20,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3e471b9fad7264146aa03aca58b27957, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _IsRed: 1
+    - _ShowTex: 1
     m_Colors:
     - _UnlitColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
