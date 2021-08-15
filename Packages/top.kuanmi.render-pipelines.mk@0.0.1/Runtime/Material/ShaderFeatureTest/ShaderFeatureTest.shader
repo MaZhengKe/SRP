@@ -3,10 +3,13 @@
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        [ToggleUI] _ShowTex("ShowTex", Float) = 0.0
+        [ToggleUI] _IsRed("IsRed", Float) = 0.0
     }
 
     HLSLINCLUDE
-    #pragma shader_feature _MKRP_SHADER_FEATURE
+    #pragma multi_compile MKRP_SHOW_TEX
+    #pragma multi_compile __ TEST_ON
     ENDHLSL
 
     SubShader
@@ -24,6 +27,11 @@
                 "LightMode" = "SRPDefaultUnlit"
             }
             CGPROGRAM
+
+            //#pragma multi_compile_local __ _MKRP_SHOW_TEX
+            #pragma shader_feature_local _MKRP_SHOW_TEX
+            #pragma shader_feature_local _RED
+            
             #pragma vertex vert
             #pragma fragment frag
             // make fog work
@@ -62,14 +70,22 @@
                 fixed4 col = tex2D(_MainTex, i.uv);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
-                
-                #ifdef _MKRP_SHADER_FEATURE
+
+                //#define _MKRP_SHOW_TEX
+#ifdef _MKRP_SHOW_TEX
                 return col;
-                #else
+#else
+    #ifdef _RED
                 return fixed4(1.0, 0.0, 0, 1);
-                #endif
+    #else
+                return fixed4(0.0, 1.0, 0, 1);
+    #endif
+                
+#endif
             }
             ENDCG
         }
     }
+    
+    CustomEditor "KuanMiEditor.Rendering.MKRP.ShaderFeatureTestGUI"
 }
