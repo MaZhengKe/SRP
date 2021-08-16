@@ -1,7 +1,7 @@
 {
   "name": "top.kuanmi.render-pipelines.mk",
   "description": "MK Render Pipeline for test srp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "unity": "2020.3",
   "unityRelease": "4f1",
   "displayName": "MKRP",
