@@ -1,0 +1,27 @@
+{
+  "name": "top.kuanmi.render-pipelines.mk",
+  "description": "MK Render Pipeline for test srp",
+  "version": "0.0.1",
+  "unity": "2020.3",
+  "unityRelease": "4f1",
+  "displayName": "MKRP",
+  "dependencies": {
+  },
+  "keywords": [
+    "graphics",
+    "performance",
+    "rendering",
+    "render",
+    "pipeline"
+  ],
+  "samples": [
+  ],
+  "upmCi": {
+    "footprint": "50f016d807f37aa9c7765d28ab0bdf78852c9e76"
+  },
+  "repository": {
+    "url": "https://github.com/mk014/Graphics.git",
+    "type": "git",
+    "revision": "434e39e917b0d6d6a91fef17eb6f4479ad1fa385"
+  }
+}
